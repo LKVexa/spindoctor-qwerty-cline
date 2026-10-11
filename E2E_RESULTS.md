@@ -77,3 +77,11 @@ The same check without Cline (`python3 tests/cline_host_check.py`): 9/9 checks, 
   file name. They're documented in `tests/e2e_mcp.py` and are the same in every spindoctor-qwerty repo.
 - **Not tested:** Cline for VS Code / JetBrains itself (the MCP route it uses was tested with the same suite), Kanban, and any run
   that calls a model.
+
+## Post-push verification
+
+The repo was cloned back from GitHub into a fresh folder (byte-identical to the staged copy, 51 files) and the host check was run
+again from the clone in a clean environment: **16/16 checks, end-to-end 12/12 through Cline's loader and 12/12 through the MCP
+route**. `cline plugin install https://github.com/LKVexa/spindoctor-qwerty-cline.git` (the README's install line) cloned and
+installed it with no sync failures, `cline config --json` showed it enabled with its six tools, and Cline's loader registered 6 tools,
+the rule and the 3 slash commands from that git-installed copy.
