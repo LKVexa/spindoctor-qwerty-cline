@@ -1,0 +1,69 @@
+{
+  "name": "spindoctor-qwerty-cline",
+  "version": "1.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Cline plugin for the SpinDoctor 3.1.2 quantum-circuit SIMULATOR: six tools, a prompt rule and slash commands; q.* scripts (1-298 logical qubits), 241 presets, q.folder, theory testing, TXT/PDF/JSON/CSV reports. Classical FP64 simulation, not a quantum computer.",
+  "keywords": [
+    "cline",
+    "cline-plugin",
+    "quantum",
+    "quantum-circuit",
+    "simulator",
+    "spindoctor",
+    "qwerty"
+  ],
+  "homepage": "https://github.com/LKVexa/spindoctor-qwerty-cline",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LKVexa/spindoctor-qwerty-cline.git"
+  },
+  "bugs": {
+    "url": "https://github.com/LKVexa/spindoctor-qwerty-cline/issues"
+  },
+  "license": "GPL-3.0-or-later",
+  "author": {
+    "name": "RUSSELL PHILIP SMITHSON",
+    "email": "russellsmithson77@outlook.com",
+    "url": "https://github.com/LKVexa"
+  },
+  "main": "./index.js",
+  "exports": {
+    ".": "./index.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "files": [
+    "index.js",
+    "rules/",
+    "engine/",
+    "README.md",
+    "LICENSE",
+    "NOTICE",
+    "COPYRIGHT",
+    "FUNCTIONS.md"
+  ],
+  "cline": {
+    "plugins": [
+      {
+        "paths": [
+          "./index.js"
+        ],
+        "capabilities": [
+          "tools",
+          "rules",
+          "commands"
+        ]
+      }
+    ]
+  },
+  "peerDependencies": {
+    "@cline/sdk": "*"
+  },
+  "peerDependenciesMeta": {
+    "@cline/sdk": {
+      "optional": true
+    }
+  }
+}
