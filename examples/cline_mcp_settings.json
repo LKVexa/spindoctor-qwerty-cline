@@ -1,0 +1,21 @@
+{
+  "mcpServers": {
+    "spindoctor-qwerty": {
+      "command": "python3",
+      "args": [
+        "<path to this repo>/engine/scripts/spindoctor_mcp.py"
+      ],
+      "env": {
+        "SPINDOCTOR_WORKSPACE": "<your home>/spindoctor-workspace",
+        "PYTHONUTF8": "1",
+        "PYTHONDONTWRITEBYTECODE": "1"
+      },
+      "disabled": false,
+      "autoApprove": [
+        "spindoctor_functions",
+        "spindoctor_list_presets",
+        "spindoctor_report"
+      ]
+    }
+  }
+}
